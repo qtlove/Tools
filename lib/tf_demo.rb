@@ -38,6 +38,14 @@ open("StopWords.dic").each do |fr|
   stop_words << iconv_utf8(fr.gsub("\n", "").gsub("\r", ""))
 end
 
+h = Hash.new
+p "Loading..."
+open("word_idfs.txt").each do |fr|
+  l = fr.gsub("\n", "").split("\t")
+  h["#{l[0]}"] = l[1]
+end
+p "OK!"
+
 id = 2975
 limit = 6
 
@@ -48,21 +56,22 @@ as = get_keywords_by_httpcws(a[0].SUMMARY, httpcws_host, true).split(" ")
 ac = get_keywords_by_httpcws(a[0].CONTENT, httpcws_host, true).split(" ")
 aw = at + as + ac
 arr = aw - (aw & stop_words)
-p arr_tf = arr.uniq.map{|x| [x, arr.select{|y| y == x}.length/arr.size.to_f]}
+arr_tf = arr.uniq.map{|x| [x, arr.select{|y| y == x}.length/arr.size.to_f]}
 arr_tfidf = []
 arr_tf.each do |item|
-  item[1] = item[1]*rand(1000)
+  idf = h["#{iconv_gb2312(item[0])}"].to_f
+  item[1] = item[1]*idf
   arr_tfidf << item
 end
-p arr_tfidf
+#p arr_tfidf
 arr_tfidf = arr_tfidf.sort{|x, y| x[1] <=> y[1]}.reverse
-p arr_tfidf
+#p arr_tfidf
 a1 = []
 size = arr_tfidf.size
 limit = size if size < limit
 0.upto(limit-1) do |i|
   a1 << arr_tfidf[i][0]
 end
-p a1.join(" ")
+open('keywords.txt', 'a') { |f| f << a1.join(" ") }
 
 #p Math.log(500)
