@@ -1,0 +1,38 @@
+--- !ruby/object:OpenWFE::ParticipantExpression 
+applied_workitem: !ruby/object:OpenWFE::InFlowWorkItem 
+  attributes: 
+    goal: meeting preparation
+    done: 
+    - - reserve beamer
+      - Tue Nov 03 15:35:29 +0800 2009
+    - - send invitations
+      - Tue Nov 03 15:35:34 +0800 2009
+    - - order sandwiches
+      - Tue Nov 03 15:35:37 +0800 2009
+    todo: 
+    - reserve room
+    over: false
+  dispatch_time: 2009-11-04 13:14:30.314000 +08:00
+  flow_expression_id: !ruby/OpenWFE::FlowExpressionId 
+    s: (fei 0.9.20 engine field:__definition MyTodoProcess 0 20091103-gekeburuza perform-task 0.0.0)
+  last_modified: 
+  participant_name: perform_task
+apply_time: 2009-11-04 13:16:15.720000 +08:00
+attributes: &id001 {}
+
+environment_id: !ruby/OpenWFE::FlowExpressionId 
+  s: (fei 0.9.20 engine field:__definition MyTodoProcess 0 20091103-gekeburuza environment 0.0)
+fei: !ruby/OpenWFE::FlowExpressionId 
+  s: (fei 0.9.20 engine field:__definition MyTodoProcess 0 20091103-gekeburuza perform-task 0.0.0)
+filter: 
+hint: perform_task
+parent_id: !ruby/OpenWFE::FlowExpressionId 
+  s: (fei 0.9.20 engine field:__definition MyTodoProcess 0 20091103-gekeburuza cursor 0.0)
+participant_name: perform_task
+raw_rep_updated: 
+raw_representation: 
+- perform-task
+- *id001
+- []
+
+updated_at: 2009-11-04 13:16:15.720000 +08:00

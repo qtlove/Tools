@@ -1,0 +1,47 @@
+# Logfile created on Mon Nov 02 16:38:48 +0800 2009 by /
+I, [2009-11-02T16:38:48.390000 #2672]  INFO -- : OpenWFE::Engine 's_engine' - build_scheduler() version is 2.0.1
+I, [2009-11-02T16:38:49.125000 #2672]  INFO -- : OpenWFE::Engine 's_engine' - new() --- engine started --- 45320340
+I, [2009-11-02T16:38:49.125000 #2672]  INFO -- : OpenWFE::ExpressionPool 's_expression_pool' - wait_for() '20091102-giyanochiza' is over
+I, [2009-11-02T16:45:30.312000 #712]  INFO -- : OpenWFE::Engine 's_engine' - build_scheduler() version is 2.0.1
+I, [2009-11-02T16:45:31.437000 #712]  INFO -- : OpenWFE::Engine 's_engine' - new() --- engine started --- 51146140
+I, [2009-11-02T16:45:59.359000 #712]  INFO -- : OpenWFE::ExpressionPool 's_expression_pool' - wait_for() '20091102-godupikuga' is over
+I, [2009-11-03T15:24:36.250000 #240]  INFO -- : OpenWFE::Engine 's_engine' - build_scheduler() version is 2.0.1
+I, [2009-11-03T15:24:36.812000 #240]  INFO -- : OpenWFE::Engine 's_engine' - new() --- engine started --- 45320450
+I, [2009-11-03T15:24:36.828000 #240]  INFO -- : OpenWFE::ExpressionPool 's_expression_pool' - wait_for() '20091103-gedishimoga' is over
+I, [2009-11-03T15:35:04.421000 #1936]  INFO -- : OpenWFE::FilePersistedEngine 's_engine' - build_scheduler() version is 2.0.1
+I, [2009-11-03T15:35:04.453000 #1936]  INFO -- : OpenWFE::CacheExpressionStorage 's_expression_storage' - new() size is 5000
+I, [2009-11-03T15:35:05.093000 #1936]  INFO -- : OpenWFE::FilePersistedEngine 's_engine' - new() --- engine started --- 45260890
+W, [2009-11-03T15:35:44.906000 #1936]  WARN -- : OpenWFE::ExpressionPool 's_expression_pool' - s_expression_pool operation :apply on (fei 0.9.20 engine field:__definition MyTodoProcess 0 20091103-gekeburuza perform-task 0.0.0) failed with
+exception : exit
+E:/Rails/Tools/lib/ruote/qs.rb:38:in `exit'
+E:/Rails/Tools/lib/ruote/qs.rb:38
+c:/ruby/lib/ruby/gems/1.8/gems/ruote-0.9.20/lib/openwfe/participants/participant.rb:121:in `call'
+c:/ruby/lib/ruby/gems/1.8/gems/ruote-0.9.20/lib/openwfe/participants/participant.rb:121:in `call_block'
+c:/ruby/lib/ruby/gems/1.8/gems/ruote-0.9.20/lib/openwfe/participants/participants.rb:154:in `consume'
+c:/ruby/lib/ruby/gems/1.8/gems/ruote-0.9.20/lib/openwfe/participants/participant_map.rb:219:in `do_dispatch'
+c:/ruby/lib/ruby/gems/1.8/gems/ruote-0.9.20/lib/openwfe/participants/participant_map.rb:179:in `dispatch'
+c:/ruby/lib/ruby/gems/1.8/gems/ruote-0.9.20/lib/openwfe/participants/participant_map.rb:179:in `initialize'
+c:/ruby/lib/ruby/gems/1.8/gems/ruote-0.9.20/lib/openwfe/participants/participant_map.rb:179:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/ruote-0.9.20/lib/openwfe/participants/participant_map.rb:179:in `dispatch'
+c:/ruby/lib/ruby/gems/1.8/gems/ruote-0.9.20/lib/openwfe/expressions/fe_participant.rb:142:in `apply'
+c:/ruby/lib/ruby/gems/1.8/gems/ruote-0.9.20/lib/openwfe/expressions/raw.rb:71:in `apply'
+c:/ruby/lib/ruby/gems/1.8/gems/ruote-0.9.20/lib/openwfe/expool/expressionpool.rb:784:in `send'
+c:/ruby/lib/ruby/gems/1.8/gems/ruote-0.9.20/lib/openwfe/expool/expressionpool.rb:784:in `do_apply_reply'
+c:/ruby/lib/ruby/gems/1.8/gems/ruote-0.9.20/lib/openwfe/util/workqueue.rb:64:in `send'
+c:/ruby/lib/ruby/gems/1.8/gems/ruote-0.9.20/lib/openwfe/util/workqueue.rb:64:in `service_init'
+c:/ruby/lib/ruby/gems/1.8/gems/ruote-0.9.20/lib/openwfe/util/workqueue.rb:59:in `loop'
+c:/ruby/lib/ruby/gems/1.8/gems/ruote-0.9.20/lib/openwfe/util/workqueue.rb:59:in `service_init'
+c:/ruby/lib/ruby/gems/1.8/gems/ruote-0.9.20/lib/openwfe/util/workqueue.rb:58:in `initialize'
+c:/ruby/lib/ruby/gems/1.8/gems/ruote-0.9.20/lib/openwfe/util/workqueue.rb:58:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/ruote-0.9.20/lib/openwfe/util/workqueue.rb:58:in `service_init'
+c:/ruby/lib/ruby/gems/1.8/gems/ruote-0.9.20/lib/openwfe/service.rb:82:in `initialize'
+c:/ruby/lib/ruby/gems/1.8/gems/ruote-0.9.20/lib/openwfe/contextual.rb:72:in `new'
+c:/ruby/lib/ruby/gems/1.8/gems/ruote-0.9.20/lib/openwfe/contextual.rb:72:in `init_service'
+c:/ruby/lib/ruby/gems/1.8/gems/ruote-0.9.20/lib/openwfe/engine/engine.rb:362:in `build_workqueue'
+c:/ruby/lib/ruby/gems/1.8/gems/ruote-0.9.20/lib/openwfe/engine/engine.rb:125:in `initialize'
+E:/Rails/Tools/lib/ruote/qs.rb:4:in `new'
+E:/Rails/Tools/lib/ruote/qs.rb:4
+I, [2009-11-03T15:35:44.906000 #1936]  INFO -- : OpenWFE::ExpressionPool 's_expression_pool' - wait_for() '20091103-gekeburuza' is over
+I, [2009-11-04T13:14:00.470000 #5516]  INFO -- : OpenWFE::FilePersistedEngine 's_engine' - build_scheduler() version is 2.0.1
+I, [2009-11-04T13:14:00.533000 #5516]  INFO -- : OpenWFE::CacheExpressionStorage 's_expression_storage' - new() size is 5000
+I, [2009-11-04T13:14:02.111000 #5516]  INFO -- : OpenWFE::FilePersistedEngine 's_engine' - new() --- engine started --- 51112620

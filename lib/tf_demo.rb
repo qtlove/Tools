@@ -46,7 +46,7 @@ open("word_idfs.txt").each do |fr|
 end
 p "OK!"
 
-id = 2975
+id = 21977
 limit = 6
 
 sql = "SELECT a.ID, a.TITLE, a.SUMMARY, b.CONTENT FROM HEJIA_ARTICLE a LEFT JOIN HEJIA_ARTICLE_CONTENT b ON (a.ID = b.ID) WHERE a.ID = #{id} LIMIT 1"

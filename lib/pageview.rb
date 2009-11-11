@@ -46,24 +46,24 @@ ActiveRecord::Base.establish_connection(
 class HejiaPageView < ActiveRecord::Base
 end
 
+#yesterday = 1.day.ago
+yesterday = 0.day.ago
+entity_types = ["a", "p"]
+entity_types.each do |entity_type|
+  pattern_key = entity_type+yesterday.strftime("%y%m%d")+"-*-*-*"
+  view_date = yesterday.strftime("%Y%m%d")
 
-yesterday = 1.day.ago
-pattern_key = "a"+yesterday.strftime("%y%m%d")+"-*-*-*"
-entity_type_id = 1
-view_date = yesterday.strftime("%Y%m%d")
-
-db = Redis.new({ :host => redis_host })
-HejiaPageView.transaction do
-  for key in db.keys(pattern_key)
-    entity_id = key.split("-")[1].to_i
-    channel_name = key.split("-")[2]
-    editor_id = key.split("-")[3].to_i
-    view_count = db["#{key}"].to_i
-    hpv = HejiaPageView.new({ :entity_type_id => entity_type_id, :entity_id => entity_id,
-        :channel_name => channel_name, :editor_id => editor_id, :view_count => view_count,
-        :view_date => view_date })
-    hpv.save
+  db = Redis.new({ :host => redis_host })
+  HejiaPageView.transaction do
+    for key in db.keys(pattern_key)
+      ip = key.split("-")[1].to_i
+      entity_id = key.split("-")[2].to_i
+      user_id = key.split("-")[3].to_i
+      view_count = db["#{key}"].to_i
+      hpv = HejiaPageView.new({ :ip => ip, :entity_type => entity_type, :entity_id => entity_id,
+          :user_id => user_id, :view_count => view_count, :view_date => view_date })
+      hpv.save
+    end
+    puts entity_type+" ok!"
   end
-  puts "ok!"
 end
-

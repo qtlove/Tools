@@ -1,0 +1,32 @@
+--- !ruby/object:OpenWFE::DefineExpression 
+applied_body: true
+apply_time: 2009-11-03 15:35:05.156000 +08:00
+attributes: &id001 
+  name: MyTodoProcess
+  revision: "0"
+body_index: 0
+children: 
+- !ruby/OpenWFE::FlowExpressionId 
+  s: (fei 0.9.20 engine field:__definition MyTodoProcess 0 20091103-gekeburuza cursor 0.0)
+environment_id: !ruby/OpenWFE::FlowExpressionId 
+  s: (fei 0.9.20 engine field:__definition MyTodoProcess 0 20091103-gekeburuza environment 0)
+fei: !ruby/OpenWFE::FlowExpressionId 
+  s: (fei 0.9.20 engine field:__definition MyTodoProcess 0 20091103-gekeburuza process-definition 0)
+parent_id: 
+raw_rep_updated: 
+raw_representation: 
+- process-definition
+- *id001
+- - - cursor
+    - {}
+
+    - - - perform-task
+        - {}
+
+        - []
+
+      - - continue
+        - unless: ${f:over}
+        - []
+
+updated_at: 2009-11-03 15:35:05.187000 +08:00

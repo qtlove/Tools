@@ -1,0 +1,39 @@
+# Logfile created on Fri Oct 23 15:24:04 +0800 2009 by /
+CHANNEL industry_news
+  LIST START AT 2009-10-23 15:24:04
+  LIST END AT 2009-10-23 15:24:11
+  DETAIL START AT 2009-10-23 15:24:11
+  DETAIL END AT 2009-10-23 15:33:37
+  SAVE START AT 2009-10-23 15:33:37
+  SAVE END AT 2009-10-23 15:37:29
+CHANNEL international_industry_news
+  LIST START AT 2009-10-23 15:37:29
+  LIST END AT 2009-10-23 15:37:36
+  DETAIL START AT 2009-10-23 15:37:36
+    ERROR AT 2009-10-23 15:40:00
+      URL: http://www.lvxingcai.com/news/2009/1019/detail-5-64894.html
+      DETAIL: getaddrinfo: no address associated with hostname.
+    ERROR AT 2009-10-23 15:40:39
+      URL: http://www.lvxingcai.com/news/2009/1019/detail-5-64879.html
+      DETAIL: Bad file descriptor - connect(2)
+  DETAIL END AT 2009-10-23 15:47:48
+  SAVE START AT 2009-10-23 15:47:50
+  SAVE END AT 2009-10-23 15:52:49
+CHANNEL enterprise_news
+  LIST START AT 2009-10-23 15:52:49
+    ERROR AT 2009-10-23 15:53:14
+      URL: http://www.lvxingcai.com/news/domestic/enterprise/list-3.html
+      DETAIL: Bad file descriptor - connect(2)
+  LIST END AT 2009-10-23 15:53:16
+  DETAIL START AT 2009-10-23 15:53:16
+  DETAIL END AT 2009-10-23 15:59:35
+  SAVE START AT 2009-10-23 15:59:35
+  SAVE END AT 2009-10-23 16:02:11
+CHANNEL international_enterprise_news
+  LIST START AT 2009-10-23 16:02:11
+  LIST END AT 2009-10-23 16:02:17
+  DETAIL START AT 2009-10-23 16:02:17
+  DETAIL END AT 2009-10-23 16:11:34
+  SAVE START AT 2009-10-23 16:11:34
+  SAVE END AT 2009-10-23 16:15:30
+END
